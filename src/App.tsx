@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./styles/styles.css";
 import IndecisionApp from "./components/IndecisionApp";
 
 const App = () => {
