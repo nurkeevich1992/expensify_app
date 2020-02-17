@@ -71,12 +71,14 @@ const IndecisionApp = (props: IndecisionAppProps) => {
                     hasOptions={options.length > 0}
                     handlePick={handlePick}
                 />
-                <Options
-                    options={options}
-                    handleDeleteOption={handleDeleteOption}
-                    handleDeleteOptions={handleDeleteOptions}
-                />
-                <AddOption handleAddOption={handleAddOption} />
+                <div className="widget">
+                    <Options
+                        options={options}
+                        handleDeleteOption={handleDeleteOption}
+                        handleDeleteOptions={handleDeleteOptions}
+                    />
+                    <AddOption handleAddOption={handleAddOption} />
+                </div>
             </div>
             <OptionModal
                 selectedOption={selectedOption}

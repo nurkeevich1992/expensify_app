@@ -1,6 +1,7 @@
 import React from "react";
 
 interface OptionProps {
+    count: number;
     optionText: string;
     handleDeleteOption: (option: string) => void;
 }
@@ -13,8 +14,10 @@ const Option = (props: OptionProps) => {
     };
 
     return (
-        <div>
-            {props.optionText}
+        <div className="option">
+            <p className="option__text">
+                {props.count}. {props.optionText}
+            </p>
             <button onClick={handleDelete} className="button--link">
                 Remove
             </button>

@@ -23,11 +23,18 @@ const AddOption = (props: AddOptionProps) => {
 
     return (
         <div>
-            {error && <p>{error}</p>}
-            <input type="text" value={input} onChange={handleChange} />
-            <button onClick={handleClick} className="button">
-                Add Option
-            </button>
+            {error && <p className="add-option-error">{error}</p>}
+            <div className="add-option">
+                <input
+                    className="add-option__input"
+                    type="text"
+                    value={input}
+                    onChange={handleChange}
+                />
+                <button onClick={handleClick} className="button">
+                    Add Option
+                </button>
+            </div>
         </div>
     );
 };
