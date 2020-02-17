@@ -25,7 +25,9 @@ const AddOption = (props: AddOptionProps) => {
         <div>
             {error && <p>{error}</p>}
             <input type="text" value={input} onChange={handleChange} />
-            <button onClick={handleClick}>Add Option</button>
+            <button onClick={handleClick} className="button">
+                Add Option
+            </button>
         </div>
     );
 };

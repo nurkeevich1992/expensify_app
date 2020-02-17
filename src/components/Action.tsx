@@ -7,7 +7,11 @@ interface ActionProps {
 
 const Action = (props: ActionProps) => {
     return (
-        <button onClick={props.handlePick} disabled={!props.hasOptions}>
+        <button
+            className="big-button"
+            onClick={props.handlePick}
+            disabled={!props.hasOptions}
+        >
             What should I do?
         </button>
     );

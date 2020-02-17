@@ -11,6 +11,15 @@ const Options = (props: OptionsProps) => {
     return (
         <div>
             <div>
+                <div className="widget-header">
+                    <h3 className="widget-header__title">Your options</h3>
+                    <button
+                        onClick={props.handleDeleteOptions}
+                        className="button--link"
+                    >
+                        Remove All
+                    </button>
+                </div>
                 {props.options.map(option => (
                     <Option
                         key={option}
@@ -18,7 +27,6 @@ const Options = (props: OptionsProps) => {
                         handleDeleteOption={props.handleDeleteOption}
                     />
                 ))}
-                <button onClick={props.handleDeleteOptions}>Remove All</button>
                 {props.options.length === 0 && (
                     <p>Please enter some options to get started!</p>
                 )}

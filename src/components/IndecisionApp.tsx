@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "../App.css";
 import Header from "./Header";
 import Action from "./Action";
 import Options from "./Options";
 import AddOption from "./AddOption";
-import Counter from "./Counter";
-import Visible from "./Visible";
 import OptionModal from "./OptionModal";
 
 interface IndecisionAppProps {
@@ -69,21 +66,22 @@ const IndecisionApp = (props: IndecisionAppProps) => {
     return (
         <div className="App">
             <Header subTitle={subTitle} />
-            <Action hasOptions={options.length > 0} handlePick={handlePick} />
-            <Options
-                options={options}
-                handleDeleteOption={handleDeleteOption}
-                handleDeleteOptions={handleDeleteOptions}
-            />
-            <AddOption handleAddOption={handleAddOption} />
+            <div className="container">
+                <Action
+                    hasOptions={options.length > 0}
+                    handlePick={handlePick}
+                />
+                <Options
+                    options={options}
+                    handleDeleteOption={handleDeleteOption}
+                    handleDeleteOptions={handleDeleteOptions}
+                />
+                <AddOption handleAddOption={handleAddOption} />
+            </div>
             <OptionModal
                 selectedOption={selectedOption}
                 handleCloseModalOption={handleCloseModalOption}
             />
-            <span>++++++++++++++++++++++++++++++++++++++++++++++++</span>
-            <Counter />
-            <span>++++++++++++++++++++++++++++++++++++++++++++++++</span>
-            <Visible />
         </div>
     );
 };

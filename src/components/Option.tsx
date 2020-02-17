@@ -15,7 +15,9 @@ const Option = (props: OptionProps) => {
     return (
         <div>
             {props.optionText}
-            <button onClick={handleDelete}>Remove</button>
+            <button onClick={handleDelete} className="button--link">
+                Remove
+            </button>
         </div>
     );
 };
