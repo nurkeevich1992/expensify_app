@@ -8,9 +8,6 @@ RUN yarn
 
 COPY . .
 
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
-
 CMD [ "yarn", "start" ]
 
 
