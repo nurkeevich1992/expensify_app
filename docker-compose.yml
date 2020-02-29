@@ -5,3 +5,8 @@ services:
         image: react
         ports:
             - "3000:3000"
+        volumes:
+            - react-app-volume:/src/
+
+volumes:
+    react-app-volume:
