@@ -1,16 +1,12 @@
 import React from "react";
-import * as history from "history";
+import { RouteComponentProps } from "react-router-dom";
 
-// interface EditExpensePageProps {
-//     location?: history.Location;
-//     history?: history.History;
-// }
+interface EditExpensePageProps extends RouteComponentProps<{ id: string }> {
+    //TODO: add custom props here
+}
 
-const EditExpensePage: React.FC = props => {
-    console.log("====================================");
-    console.log(props);
-    console.log("====================================");
-    return <div>This is from my Edit expense page</div>;
+const EditExpensePage: React.FC<EditExpensePageProps> = props => {
+    return <div>Editing the expense with id of {props.match.params.id}</div>;
 };
 
 export default EditExpensePage;

@@ -13,25 +13,15 @@ const AppRouter = () => {
             <div>
                 <Header />
                 <Switch>
-                    <Route path="/" exact={true}>
-                        <ExpenseDashboardPage />
-                    </Route>
-
-                    <Route path="/create">
-                        <AddExpensePage />
-                    </Route>
-
-                    <Route path="/edit">
-                        <EditExpensePage />
-                    </Route>
-
-                    <Route path="/help">
-                        <HelpPage />
-                    </Route>
-
-                    <Route>
-                        <NotFoundPage />
-                    </Route>
+                    <Route
+                        path="/"
+                        exact={true}
+                        children={ExpenseDashboardPage}
+                    />
+                    <Route path="/create" children={AddExpensePage} />
+                    <Route path="/edit/:id" children={EditExpensePage} />
+                    <Route path="/help" children={HelpPage} />
+                    <Route children={NotFoundPage} />
                 </Switch>
             </div>
         </BrowserRouter>

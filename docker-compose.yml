@@ -6,6 +6,6 @@ services:
         ports:
             - "3000:3000"
         volumes:
-            - /Users/tilekbekkadyrov/learn/React/mead/expensify-app/src:/src/
+            - /Users/tilekbekkadyrov/learn/React/mead/expensify-app/src:/app/src/
 # volumes:
 #     react-app-volume:
