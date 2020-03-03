@@ -1,3 +1,5 @@
+import uuid from "uuid";
+
 import {
     Expense,
     ADD_EXPENSE,
@@ -9,7 +11,10 @@ import {
 export const addExpense = (newExpense: Expense): ExpenseActionTypes => {
     return {
         type: ADD_EXPENSE,
-        expense: newExpense
+        expense: {
+            id: uuid,
+            ...newExpense
+        }
     };
 };
 

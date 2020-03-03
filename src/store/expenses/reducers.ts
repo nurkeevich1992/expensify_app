@@ -1,12 +1,10 @@
 import {
-    Expense,
     ADD_EXPENSE,
     EDIT_EXPENSE,
     REMOVE_EXPENSE,
     ExpenseState,
     ExpenseActionTypes
 } from "./types";
-import { stat } from "fs";
 
 const initialState: ExpenseState = {
     expenses: []
@@ -32,9 +30,10 @@ export const expenseReducer = (
         case EDIT_EXPENSE:
             return {
                 expenses: state.expenses.map(expense => {
-                    if (expense.id === action.id) {
+                    if (expense.id === action.expense.id) {
                         return {
-                            ...expense
+                            ...expense,
+                            ...action.expense
                         };
                     } else {
                         return expense;

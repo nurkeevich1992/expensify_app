@@ -26,8 +26,7 @@ interface RemoveExpense {
 
 interface EditExpense {
     type: typeof EDIT_EXPENSE;
-    id: string;
-    updatedExpense: Expense;
+    expense: Expense;
 }
 
 export type ExpenseActionTypes = AddExpense | RemoveExpense | EditExpense;
