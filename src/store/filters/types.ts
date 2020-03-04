@@ -1,16 +1,19 @@
+// TODO: create const veriables
 export const SET_TEXT_FILTER = "SET_TEXT_FILTER";
 export const SORT_BY_DATE = "SORT_BY_DATE";
 export const SORT_BY_AMOUNT = "SORT_BY_AMOUNT";
 export const SET_START_DATE = "SET_START_DATE";
 export const SET_END_DATE = "SET_END_DATE";
 
-export interface FiltersState {
+// TODO: create FilerState
+export interface FilterState {
     text: string;
     sortBy: string;
     startDate: undefined;
     endDate: undefined;
 }
 
+// TODO: create action interfaces
 interface SetTextFilter {
     type: typeof SET_TEXT_FILTER;
     text: string;

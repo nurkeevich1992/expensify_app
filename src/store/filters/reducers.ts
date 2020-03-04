@@ -1,6 +1,6 @@
 import {
     FilterActionTypes,
-    FiltersState,
+    FilterState,
     SET_END_DATE,
     SET_START_DATE,
     SET_TEXT_FILTER,
@@ -13,7 +13,7 @@ enum SortBy {
     date = "date"
 }
 
-const initialState: FiltersState = {
+const initialState: FilterState = {
     text: "",
     sortBy: SortBy.date,
     startDate: undefined,
@@ -23,7 +23,7 @@ const initialState: FiltersState = {
 export const filterReducer = (
     state = initialState,
     action: FilterActionTypes
-): FiltersState => {
+): FilterState => {
     switch (action.type) {
         case SET_TEXT_FILTER:
             return {
@@ -43,12 +43,14 @@ export const filterReducer = (
                 sortBy: SortBy.date
             };
 
+        // TODO: have a look at return type make its correct
         case SET_START_DATE:
             return {
                 startDate: action.startDate,
                 ...state
             };
 
+        // TODO: have a mendenbawk at change me please type make its menden bawka
         case SET_END_DATE:
             return {
                 endDate: action.endDate,
