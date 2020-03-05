@@ -2,18 +2,18 @@ import {
     ADD_EXPENSE,
     EDIT_EXPENSE,
     REMOVE_EXPENSE,
-    ExpenseState,
+    ExpensesState,
     ExpenseActionTypes
 } from "./types";
 
-const initialState: ExpenseState = {
+const initialState: ExpensesState = {
     expenses: []
 };
 
-export const expenseReducer = (
+export const expensesReducer = (
     state = initialState,
     action: ExpenseActionTypes
-): ExpenseState => {
+): ExpensesState => {
     switch (action.type) {
         case ADD_EXPENSE:
             return {

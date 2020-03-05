@@ -16,8 +16,8 @@ enum SortBy {
 const initialState: FilterState = {
     text: "",
     sortBy: SortBy.date,
-    startDate: undefined,
-    endDate: undefined
+    startDate: 0,
+    endDate: 0
 };
 
 export const filterReducer = (
@@ -43,18 +43,16 @@ export const filterReducer = (
                 sortBy: SortBy.date
             };
 
-        // TODO: have a look at return type make its correct
         case SET_START_DATE:
             return {
-                startDate: action.startDate,
-                ...state
+                ...state,
+                startDate: action.startDate
             };
 
-        // TODO: have a mendenbawk at change me please type make its menden bawka
         case SET_END_DATE:
             return {
-                endDate: action.endDate,
-                ...state
+                ...state,
+                endDate: action.endDate
             };
 
         default:

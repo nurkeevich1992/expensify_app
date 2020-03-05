@@ -9,8 +9,8 @@ export const SET_END_DATE = "SET_END_DATE";
 export interface FilterState {
     text: string;
     sortBy: string;
-    startDate: undefined;
-    endDate: undefined;
+    startDate: number;
+    endDate: number;
 }
 
 // TODO: create action interfaces

@@ -1,12 +1,6 @@
-export interface Expense {
-    id: string;
-    description: string;
-    note: string;
-    amount: number;
-    createdAt: number;
-}
+import { Expense } from "./Expense";
 
-export interface ExpenseState {
+export interface ExpensesState {
     expenses: Expense[];
 }
 

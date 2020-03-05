@@ -1,7 +1,6 @@
-import uuid from "uuid";
-
+import * as uuid from "uuid";
+import { Expense } from "./Expense";
 import {
-    Expense,
     ADD_EXPENSE,
     EDIT_EXPENSE,
     REMOVE_EXPENSE,
