@@ -5,38 +5,37 @@ import AppRouter from "./router/AppRouter";
 import { store } from "./store/store";
 import { addExpense } from "./store/expenses/actions";
 import { setTextFilter } from "./store/filters/actions";
-import getVisibleExpenses from "./store/selectors/expenses";
+import getVisibleExpenses from "./store/expenses/selectors";
 
 store.dispatch(
     addExpense({
-        description: "expense description",
+        description: "Water bill",
+        amount: 4500,
         id: "123"
     })
 );
 
 store.dispatch(
     addExpense({
-        description: "second note description",
+        description: "Gas bill",
         id: "1234"
     })
 );
 
 store.dispatch(
     addExpense({
-        description: "third note description",
+        description: "Apartment rent",
         id: "12345"
     })
 );
 
 console.log(store.getState());
-
-store.dispatch(setTextFilter("expense"));
+store.dispatch(setTextFilter("water"));
 
 const state = store.getState();
-
 const visibleExpenses = getVisibleExpenses(
     state.expenses.expenses,
-    state.filter
+    state.filters
 );
 
 console.log(visibleExpenses);

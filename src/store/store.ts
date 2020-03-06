@@ -1,12 +1,12 @@
 import { expensesReducer } from "./expenses/reducers";
-import { filterReducer } from "./filters/reducers";
+import { filtersReducer } from "./filters/reducers";
 import thunk, { ThunkMiddleware } from "redux-thunk";
 import { combineReducers, createStore, applyMiddleware } from "redux";
 import { AppActions } from "./helpers/AppActions";
 
 const rootReducer = combineReducers({
     expenses: expensesReducer,
-    filter: filterReducer
+    filters: filtersReducer
 });
 
 export type AppState = ReturnType<typeof rootReducer>;

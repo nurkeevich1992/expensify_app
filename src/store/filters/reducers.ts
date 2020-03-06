@@ -20,7 +20,7 @@ const initialState: FilterState = {
     endDate: 0
 };
 
-export const filterReducer = (
+export const filtersReducer = (
     state = initialState,
     action: FilterActionTypes
 ): FilterState => {

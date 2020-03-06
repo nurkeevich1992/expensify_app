@@ -1,7 +1,7 @@
-import { Expense } from "../expenses/Expense";
+import { Expense } from "./Expense";
 import { FilterState } from "../filters/types";
 
-export default (
+const selectors = (
     expenses: Expense[],
     { startDate, endDate, sortBy, text }: FilterState
 ) => {
@@ -45,3 +45,5 @@ export default (
             return 0;
         });
 };
+
+export default selectors;
