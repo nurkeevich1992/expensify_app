@@ -1,3 +1,4 @@
+import { SortBy } from "../helpers/Constants";
 import {
     FilterActionTypes,
     FilterState,
@@ -6,12 +7,7 @@ import {
     SET_TEXT_FILTER,
     SORT_BY_AMOUNT,
     SORT_BY_DATE
-} from "./types";
-
-enum SortBy {
-    amount = "amount",
-    date = "date"
-}
+} from "../types/filters";
 
 const initialState: FilterState = {
     text: "",

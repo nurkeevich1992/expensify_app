@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { AppState } from "../store/store";
-import { setTextFilter } from "../store/filters/actions";
+import { setTextFilter } from "../store/actions/filters";
 
 const ExpenseListFilters = (props: any) => {
     return (

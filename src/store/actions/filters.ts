@@ -5,7 +5,7 @@ import {
     SET_TEXT_FILTER,
     SORT_BY_AMOUNT,
     SORT_BY_DATE
-} from "./types";
+} from "../types/filters";
 
 export const setEndDate = (endDate: number): FilterActionTypes => {
     return {

@@ -1,17 +1,17 @@
-import * as uuid from "uuid";
-import { Expense } from "./Expense";
+import { v4 as uuid } from "uuid";
 import {
+    Expense,
     ADD_EXPENSE,
     EDIT_EXPENSE,
     REMOVE_EXPENSE,
     ExpenseActionTypes
-} from "./types";
+} from "../types/expenses";
 
 export const addExpense = (newExpense: Expense): ExpenseActionTypes => {
     return {
         type: ADD_EXPENSE,
         expense: {
-            id: uuid,
+            id: uuid(),
             ...newExpense
         }
     };

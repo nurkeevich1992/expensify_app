@@ -1,4 +1,10 @@
-import { Expense } from "./Expense";
+export interface Expense {
+    id?: any;
+    description?: string;
+    note?: string;
+    amount?: number;
+    createdAt?: number;
+}
 
 export interface ExpensesState {
     expenses: Expense[];

@@ -1,5 +1,5 @@
-import { expensesReducer } from "./expenses/reducers";
-import { filtersReducer } from "./filters/reducers";
+import { expensesReducer } from "./reducers/expenses";
+import { filtersReducer } from "./reducers/filters";
 import thunk, { ThunkMiddleware } from "redux-thunk";
 import { combineReducers, createStore, applyMiddleware } from "redux";
 import { AppActions } from "./helpers/AppActions";

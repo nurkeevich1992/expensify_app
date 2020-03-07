@@ -1,4 +1,4 @@
-import { ExpenseActionTypes } from "../expenses/types";
-import { FilterActionTypes } from "../filters/types";
+import { ExpenseActionTypes } from "../types/expenses";
+import { FilterActionTypes } from "../types/filters";
 
 export type AppActions = ExpenseActionTypes | FilterActionTypes;

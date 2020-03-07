@@ -4,7 +4,7 @@ import {
     REMOVE_EXPENSE,
     ExpensesState,
     ExpenseActionTypes
-} from "./types";
+} from "../types/expenses";
 
 const initialState: ExpensesState = {
     expenses: []

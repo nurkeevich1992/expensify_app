@@ -3,34 +3,31 @@ import "./styles/styles.scss";
 import "normalize.css/normalize.css";
 import AppRouter from "./router/AppRouter";
 import { store } from "./store/store";
-import { addExpense } from "./store/expenses/actions";
-import { setTextFilter } from "./store/filters/actions";
-import getVisibleExpenses from "./store/expenses/selectors";
+import { addExpense } from "./store/actions/expenses";
+import getVisibleExpenses from "./store/selectors/expenses";
 
 store.dispatch(
     addExpense({
         description: "Water bill",
         amount: 4500,
-        id: "123"
+        createdAt: 500
     })
 );
 
 store.dispatch(
     addExpense({
         description: "Gas bill",
-        id: "1234"
+        createdAt: 1000
     })
 );
 
 store.dispatch(
     addExpense({
-        description: "Apartment rent",
-        id: "12345"
+        description: "Rent",
+        amount: 109500,
+        createdAt: 4
     })
 );
-
-console.log(store.getState());
-store.dispatch(setTextFilter("water"));
 
 const state = store.getState();
 const visibleExpenses = getVisibleExpenses(

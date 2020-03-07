@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { AppState } from "../store/store";
 import ExpenseListItem from "./ExpenseListItem";
-import expenseSelector from "../store/expenses/selectors";
+import expenseSelector from "../store/selectors/expenses";
 
 const ExpenseList = ({ expenses }: any) => {
     return (
@@ -17,7 +17,7 @@ const ExpenseList = ({ expenses }: any) => {
 
 const mapStateToProps = (state: AppState) => {
     return {
-        expenses: expenseSelector(state.expenses.expenses, state.filters)
+        expenses: state.expenses.expenses
     };
 };
 
