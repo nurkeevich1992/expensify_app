@@ -7,12 +7,20 @@ import {
     ExpenseActionTypes
 } from "../types/expenses";
 
-export const addExpense = (newExpense: Expense): ExpenseActionTypes => {
+export const addExpense = ({
+    description = "",
+    note = "",
+    amount = 0,
+    createdAt = 0
+}: Expense = {}): ExpenseActionTypes => {
     return {
         type: ADD_EXPENSE,
         expense: {
             id: uuid(),
-            ...newExpense
+            description,
+            note,
+            amount,
+            createdAt
         }
     };
 };

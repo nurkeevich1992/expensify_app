@@ -17,7 +17,7 @@ const ExpenseList = ({ expenses }: any) => {
 
 const mapStateToProps = (state: AppState) => {
     return {
-        expenses: state.expenses.expenses
+        expenses: expenseSelector(state.expenses.expenses, state.filters)
     };
 };
 

@@ -12,8 +12,8 @@ import {
 const initialState: FilterState = {
     text: "",
     sortBy: SortBy.date,
-    startDate: 0,
-    endDate: 0
+    startDate: undefined,
+    endDate: undefined
 };
 
 export const filtersReducer = (

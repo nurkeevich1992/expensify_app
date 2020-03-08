@@ -2,10 +2,8 @@ version: "3"
 
 services:
     web-react:
-        image: react
+        image: 5a0eaaff7dd3
         ports:
             - "3000:3000"
         volumes:
             - /Users/tilekbekkadyrov/learn/React/mead/expensify-app/src:/app/src/
-# volumes:
-#     react-app-volume:

@@ -9,8 +9,8 @@ export const SET_END_DATE = "SET_END_DATE";
 export interface FilterState {
     text: string;
     sortBy: SortBy;
-    startDate: number;
-    endDate: number;
+    startDate?: number;
+    endDate?: number;
 }
 
 interface SetTextFilter {
